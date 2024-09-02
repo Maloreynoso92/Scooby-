@@ -1,0 +1,24 @@
+            - nombre: Configurar el entorno Node.js
+  usos: acciones/setup-node@v4.0.3
+  con:
+    # Establezca always-auth en npmrc.
+    always-auth: # opcional, el valor predeterminado es falso
+    # Versión Especificación de la versión que se utilizará. Ejemplos: 12.x, 10.15.1, >=10.15.0.
+    node-version: # opcional
+    # Archivo que contiene la especificación de la versión que se utilizará. Ejemplos: package.json, .nvmrc, .node-version, .tool-versions.
+    archivo-versión-nodo: # opcional
+    # Arquitectura de destino que utilizará Node. Ejemplos: x86, x64. Se utilizará la arquitectura del sistema de forma predeterminada.
+    arquitectura: # opcional
+    # Configure esta opción si desea que la acción busque la última versión disponible que satisfaga la especificación de la versión.
+    check-latest: # opcional
+    # Registro opcional para configurar la autenticación. Se configurará el registro en un archivo .npmrc y .yarnrc a nivel de proyecto y se configurará la autenticación para leer desde env.NODE_AUTH_TOKEN.
+    URL del registro: # opcional
+    # Ámbito opcional para la autenticación en registros con ámbito. Se recurrirá al propietario del repositorio cuando se utilice el registro de paquetes de GitHub (https://npm.pkg.github.com/).
+    alcance: # opcional
+    # Se utiliza para extraer distribuciones de nodos de node-versions. Dado que hay un valor predeterminado, normalmente el usuario no lo proporciona. Al ejecutar esta acción en github.com, el valor predeterminado es suficiente. Al ejecutar en GHES, puede pasar un token de acceso personal para github.com si experimenta una limitación de velocidad.
+    token: # opcional, el valor predeterminado es ${{ github.server_url == 'https://github.com' && github.token || '' }}
+    # Se utiliza para especificar un administrador de paquetes para el almacenamiento en caché en el directorio predeterminado. Valores admitidos: npm, yarn, pnpm.
+    caché: # opcional
+    # Se utiliza para especificar la ruta a un archivo de dependencia: package-lock.json, yarn.lock, etc. Admite caracteres comodín o una lista de nombres de archivos para almacenar en caché varias dependencias.
+    ruta de dependencia de caché: # opcional
+          
